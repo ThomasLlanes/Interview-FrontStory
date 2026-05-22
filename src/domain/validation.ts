@@ -16,7 +16,7 @@ export const validateCampaign = (
     return "End date is required unless the campaign is still running.";
   }
 
-  if (values.endDate && values.endDate < values.startDate) {
+  if (values.endDate && values.endDate <= values.startDate) {
     return "End date must be after the start date.";
   }
 
