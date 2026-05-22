@@ -37,7 +37,7 @@ button {
 }
 
 .app-shell {
-  width: min(1180px, calc(100% - 32px));
+  width: min(1360px, calc(100% - 32px));
   margin: 0 auto;
   padding: 36px 0;
 }
@@ -114,7 +114,7 @@ h1 {
 
 .workspace {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
+  grid-template-columns: 320px minmax(0, 1fr);
   gap: 20px;
   align-items: start;
 }
@@ -281,11 +281,12 @@ input:focus {
 
 .table-scroll {
   overflow-x: auto;
+  scrollbar-gutter: stable;
 }
 
 table {
   width: 100%;
-  min-width: 0;
+  min-width: 930px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -293,7 +294,7 @@ table {
 th,
 td {
   overflow: hidden;
-  padding: 14px 9px;
+  padding: 14px 10px;
   text-align: left;
   border-bottom: 1px solid var(--line);
   text-overflow: ellipsis;
@@ -302,14 +303,14 @@ td {
 
 th:nth-child(1),
 td:nth-child(1) {
-  width: 21%;
+  width: 18%;
 }
 
 th:nth-child(2),
 td:nth-child(2),
 th:nth-child(3),
 td:nth-child(3) {
-  width: 12%;
+  width: 15%;
 }
 
 th:nth-child(4),
@@ -320,7 +321,7 @@ th:nth-child(6),
 td:nth-child(6),
 th:nth-child(7),
 td:nth-child(7) {
-  width: 11%;
+  width: 10%;
 }
 
 th:nth-child(8),
@@ -473,14 +474,14 @@ tbody tr.editing-row {
   }
 
   table {
-    min-width: 820px;
+    min-width: 930px;
     table-layout: auto;
   }
 }
 
 @media (max-width: 640px) {
   .app-shell {
-    width: min(100% - 20px, 1180px);
+    width: min(100% - 20px, 1360px);
     padding: 24px 0;
   }
 

@@ -1,4 +1,11 @@
-import { ArrowDown, ArrowDownAZ, ArrowUp, ArrowUpAZ } from "lucide-react";
+import {
+  ArrowDownAZ,
+  ArrowUpAZ,
+  CalendarArrowDown,
+  CalendarArrowUp,
+  TrendingDown,
+  TrendingUp,
+} from "lucide-react";
 import type { SortKey, SortState } from "../domain/types";
 
 type SortIconProps = {
@@ -19,9 +26,17 @@ export function SortIcon({ sort, sortKey }: SortIconProps) {
     );
   }
 
+  if (sortKey === "startDate" || sortKey === "endDate") {
+    return isAscending ? (
+      <CalendarArrowUp aria-hidden="true" className={className} size={16} />
+    ) : (
+      <CalendarArrowDown aria-hidden="true" className={className} size={16} />
+    );
+  }
+
   return isAscending ? (
-    <ArrowUp aria-hidden="true" className={className} size={16} />
+    <TrendingUp aria-hidden="true" className={className} size={16} />
   ) : (
-    <ArrowDown aria-hidden="true" className={className} size={16} />
+    <TrendingDown aria-hidden="true" className={className} size={16} />
   );
 }
