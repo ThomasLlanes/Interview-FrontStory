@@ -35,5 +35,9 @@ export const loadCampaigns = (): Campaign[] => {
 };
 
 export const saveCampaigns = (campaigns: Campaign[]) => {
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(campaigns));
+  try {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(campaigns));
+  } catch {
+    // Campaign changes should still work in-memory if storage is unavailable.
+  }
 };
