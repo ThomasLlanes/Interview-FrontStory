@@ -1,6 +1,6 @@
 import { Save, X } from "lucide-react";
 import { FormEvent } from "react";
-import type { Campaign, CampaignFormValues } from "../models/types";
+import type { Campaign, CampaignFormValues } from "../domain/types";
 
 type CampaignEditSheetProps = {
   campaign: Campaign;

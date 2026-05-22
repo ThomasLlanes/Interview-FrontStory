@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowDownAZ, ArrowUp, ArrowUpAZ } from "lucide-react";
-import type { SortKey, SortState } from "../types";
+import type { SortKey, SortState } from "../domain/types";
 
 type SortIconProps = {
   sort: SortState;

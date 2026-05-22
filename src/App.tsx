@@ -1,12 +1,12 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
-import { CampaignForm } from "./presentation/CampaignForm";
-import { CampaignTable } from "./presentation/CampaignTable";
-import { DashboardHeader } from "./presentation/DashboardHeader";
-import { emptyCampaignForm } from "./components/constants";
-import { loadCampaigns, saveCampaigns } from "./components/storage";
-import { getProfit, sortCampaigns } from "./components/sorting";
-import type { Campaign, CampaignFormValues, SortKey, SortState } from "./models/types";
-import { validateCampaign } from "./components/validation";
+import { CampaignForm } from "./components/CampaignForm";
+import { CampaignTable } from "./components/CampaignTable";
+import { DashboardHeader } from "./components/DashboardHeader";
+import { emptyCampaignForm } from "./domain/constants";
+import { getProfit, sortCampaigns } from "./domain/sorting";
+import type { Campaign, CampaignFormValues, SortKey, SortState } from "./domain/types";
+import { validateCampaign } from "./domain/validation";
+import { loadCampaigns, saveCampaigns } from "./infrastructure/storage";
 
 function App() {
   const [campaigns, setCampaigns] = useState<Campaign[]>(() => loadCampaigns());

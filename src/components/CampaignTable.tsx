@@ -1,9 +1,9 @@
 import { Fragment, FormEvent } from "react";
 import { Pencil, Trash2 } from "lucide-react";
-import { sortLabels } from "../constants";
-import { formatCurrency, formatDate, formatNumber } from "../formatters";
-import { getProfit } from "../sorting";
-import type { Campaign, CampaignFormValues, SortKey, SortState } from "../types";
+import { sortLabels } from "../domain/constants";
+import { getProfit } from "../domain/sorting";
+import type { Campaign, CampaignFormValues, SortKey, SortState } from "../domain/types";
+import { formatCurrency, formatDate, formatNumber } from "../shared/formatters";
 import { CampaignEditSheet } from "./CampaignEditSheet";
 import { SortIcon } from "./SortIcon";
 

@@ -1,4 +1,4 @@
-import type { CampaignFormValues } from "../models/types";
+import type { CampaignFormValues } from "./types";
 
 export const validateCampaign = (
   values: CampaignFormValues,

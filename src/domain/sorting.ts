@@ -1,4 +1,4 @@
-import type { Campaign, SortState } from "../models/types";
+import type { Campaign, SortState } from "./types";
 
 export const getProfit = (campaign: Campaign) => campaign.revenue - campaign.cost;
 

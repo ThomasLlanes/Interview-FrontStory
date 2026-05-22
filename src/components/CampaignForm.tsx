@@ -1,6 +1,6 @@
 import { Plus } from "lucide-react";
 import { FormEvent } from "react";
-import type { CampaignFormValues } from "../models/types";
+import type { CampaignFormValues } from "../domain/types";
 
 type CampaignFormProps = {
   error: string;

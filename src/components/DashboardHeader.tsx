@@ -1,4 +1,4 @@
-import { formatCurrency, formatNumber } from "../formatters";
+import { formatCurrency, formatNumber } from "../shared/formatters";
 import { SummaryMetric } from "./SummaryMetric";
 
 type DashboardTotals = {

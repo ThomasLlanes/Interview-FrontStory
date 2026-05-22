@@ -1,4 +1,4 @@
-import type { CampaignFormValues, SortKey } from "../models/types";
+import type { CampaignFormValues, SortKey } from "./types";
 
 export const emptyCampaignForm: CampaignFormValues = {
   name: "",
