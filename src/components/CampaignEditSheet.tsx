@@ -108,7 +108,7 @@ export function CampaignEditSheet({
               onChange={(event) =>
                 onUpdateField(
                   "endDate",
-                  event.target.checked ? "" : campaign.endDate || campaign.startDate,
+                  event.target.checked ? "" : values.endDate || values.startDate,
                 )
               }
             />
