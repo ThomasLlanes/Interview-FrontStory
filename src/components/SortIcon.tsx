@@ -16,7 +16,7 @@ type SortIconProps = {
 export function SortIcon({ sort, sortKey }: SortIconProps) {
   const isActive = sort.key === sortKey;
   const isAscending = isActive && sort.direction === "asc";
-  const className = `sort-icon ${isActive ? "active" : ""}`;
+  const className = "sort-icon";
 
   if (sortKey === "name") {
     return isAscending ? (
