@@ -20,6 +20,14 @@ export const validateCampaign = (
     return "End date must be after the start date.";
   }
 
+  if (
+    !Number.isFinite(values.clicks) ||
+    !Number.isFinite(values.cost) ||
+    !Number.isFinite(values.revenue)
+  ) {
+    return "Clicks, cost, and revenue must be valid numbers.";
+  }
+
   if (values.clicks < 0 || values.cost < 0 || values.revenue < 0) {
     return "Clicks, cost, and revenue cannot be negative.";
   }
