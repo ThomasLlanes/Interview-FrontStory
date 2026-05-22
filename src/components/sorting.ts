@@ -1,4 +1,4 @@
-import type { Campaign, SortState } from "./types";
+import type { Campaign, SortState } from "../models/types";
 
 export const getProfit = (campaign: Campaign) => campaign.revenue - campaign.cost;
 
@@ -14,9 +14,9 @@ export const sortCampaigns = (campaigns: Campaign[], sort: SortState) => {
       return a.name.localeCompare(b.name) * direction;
     }
 
-    return (
-      (new Date(a[sort.key]).getTime() - new Date(b[sort.key]).getTime()) *
-      direction
-    );
+    const dateA = a[sort.key] ? new Date(a[sort.key]).getTime() : Infinity;
+    const dateB = b[sort.key] ? new Date(b[sort.key]).getTime() : Infinity;
+
+    return (dateA - dateB) * direction;
   });
 };

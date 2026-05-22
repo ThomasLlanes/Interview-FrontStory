@@ -1,5 +1,5 @@
 import { seedCampaigns } from "./data";
-import type { Campaign } from "./types";
+import type { Campaign } from "../models/types";
 
 const STORAGE_KEY = "frontstory-campaigns";
 

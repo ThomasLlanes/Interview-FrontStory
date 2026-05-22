@@ -1,4 +1,4 @@
-import type { Campaign } from "./types";
+import type { Campaign } from "../models/types";
 
 export const seedCampaigns: Campaign[] = [
   {
